@@ -3,7 +3,10 @@ name = "shutil"
 version = "0.1.0"
 edition = "2021"
 license = "AGPL-3.0"
+homepage = "https://github.com/rajbot/shutil"
 repository = "https://github.com/rajbot/shutil"
+description = "Shell utility helper library"
+readme = "README.md"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
