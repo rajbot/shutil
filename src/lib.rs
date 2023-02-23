@@ -190,7 +190,6 @@ mod tests {
     fn test_echo_rev() {
         let output = pipe(vec![vec!["echo", "foo"], vec!["rev"]]);
         let unwrapped = output.unwrap();
-        println!("unwrapped = {}", unwrapped);
         assert!(unwrapped.eq("oof\n"));
     }
 
@@ -204,7 +203,6 @@ mod tests {
             vec!["tr", "a-z", "A-Z"],
         ]);
         let unwrapped = output.unwrap();
-        println!("unwrapped = {}", unwrapped);
         assert!(unwrapped.eq("OOF\n"));
     }
 }
