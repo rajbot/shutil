@@ -7,6 +7,7 @@ pub enum ErrorKind {
     UnknownError,
     ExecError,
     UnicodeDecodeError,
+    InvalidFormatError,
 }
 
 #[derive(Debug)]
@@ -19,8 +20,8 @@ pub struct Error {
 impl Error {
     pub fn new(kind: ErrorKind, code: Option<i32>, msg: &str) -> Error {
         Error {
-            kind: kind,
-            code: code,
+            kind,
+            code,
             details: msg.to_string(),
         }
     }
