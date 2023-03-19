@@ -6,7 +6,10 @@ use crate::error::{Error, ErrorKind};
 // pipe()
 //_____________________________________________________________________________
 
-/// Run a shell command and return stdout as a String, wrapped in a Result.
+/// Execute a shell command pipeline and return stdout. The input is a Vec of
+/// shell commands, where the output of the first command is connected via a
+/// pipe to the input of the second. The stdout of the final command in the
+/// pipeline is returned as a String, wrapped in a Result.
 
 /// In the case of non-zero exit status, return a shutil::Error result
 /// with kind() set to ExecError and code() set to the exit code.
